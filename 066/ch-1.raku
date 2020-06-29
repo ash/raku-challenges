@@ -1,6 +1,11 @@
 #!/usr/bin/env raku
 
-# only positive
+# Task 1 from
+# https://perlweeklychallenge.org/blog/perl-weekly-challenge-066/
+
+# Comments: https://andrewshitov.com/2020/06/22/raku-string-vs-integer-practices/
+
+# Only positive
 my $m = 5;
 my $n = 2;
 

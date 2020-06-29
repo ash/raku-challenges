@@ -1,6 +1,11 @@
 #!/usr/bin/env raku
 
-# can be both positive and negative numbers in any combination
+# Task 1 from
+# https://perlweeklychallenge.org/blog/perl-weekly-challenge-066/
+
+# Comments: https://andrewshitov.com/2020/06/22/raku-string-vs-integer-practices/
+
+# Can be both positive and negative numbers in any combination
 my $m = 5;
 my $n = -2;
 

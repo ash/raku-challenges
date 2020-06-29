@@ -1,5 +1,10 @@
 #!/usr/bin/env raku
 
+# Task 2 from
+# https://perlweeklychallenge.org/blog/perl-weekly-challenge-066/
+
+# Comments: https://andrewshitov.com/2020/06/22/check-if-the-number-can-be-presented-as-a-power-of-integers/
+
 my $n = 9;
 # my $n = 45;
 
