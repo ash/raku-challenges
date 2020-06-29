@@ -3,7 +3,7 @@
 # Task 1 from
 # https://perlweeklychallenge.org/blog/perl-weekly-challenge-003/
 
-# Comments: https://andrewshitov.com/2020/06/30/raku-challenge-week-3/(opens in a new tab)
+# Comments: https://andrewshitov.com/2020/06/30/raku-challenge-week-3/
 
 # See also https://oeis.org/A051037 for the sequence
 

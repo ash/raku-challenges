@@ -1,7 +1,7 @@
 #!/usr/bin/env raku
 
 # Illustration to how to compute prime factors
-# Comments: https://andrewshitov.com/2020/06/30/raku-challenge-week-3/(opens in a new tab)
+# Comments: https://andrewshitov.com/2020/06/30/raku-challenge-week-3/
 
 my $max = 20;
 my @prime = grep *.is-prime, ^$max;
