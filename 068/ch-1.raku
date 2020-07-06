@@ -20,3 +20,9 @@ say @input.join("\n");
 sub empty_lines(@data) {
     grep {!all(@data[$_])}, @data.keys;
 }
+
+# Output:
+
+# 0 0 0
+# 1 0 1
+# 1 0 1
