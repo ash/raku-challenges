@@ -17,17 +17,6 @@ for ((@rows X ^@input[0]), (^@input X @cols)).flat -> $row, $col {
     @input[$row][$col] = 0;
 }
 
-# for ^@input X @cols -> ($row, $col) {
-#     @input[$row][$col] = 0;
-# }
-# for @rows X ^@input[0] -> ($row, $col) {
-#     @input[$row][$col] = 0;
-# }
-
-# for ^@input X @cols -> ($row, $col) {
-#     @input[$row][$col] = 0;
-# }
-
 say @input.join("\n");
 
 sub empty_lines(@data) {
