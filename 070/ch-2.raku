@@ -3,7 +3,7 @@
 # Task 2 from
 # https://perlweeklychallenge.org/blog/perl-weekly-challenge-070/
 
-# Comments: 
+# Comments: https://andrewshitov.com/2020/07/20/gray-code-in-raku/
 
 # Usage:
 # $ raku ch-2.raku 4
