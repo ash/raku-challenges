@@ -12,22 +12,6 @@
     0, 3
     1, 1
     2, 3
-
-
-    If there Xs that have other Xs as their neighbours, then
-    this program makes less cell checks than ch-2.cpp:
-
-    $ g++ -std=c++17 ch-2.cpp
-    bash-3.2$ ./a.out 
-    0, 0
-    2, 0
-    35 checks made
-
-    $ g++ -std=c++17 ch-2a.cpp
-    $ ./a.out 
-    0, 0
-    2, 0
-    30 checks made
 */
 
 #include <iostream>
@@ -62,14 +46,13 @@ int main() {
 
     for (auto row = 0; row != matrix.size(); row++) {
         for (auto col = 0; col != matrix[0].size(); col++) {
-            if (matrix[row][col] != 'X') continue;
+            if (matrix[row][col] == 'O') continue;
 
             bool ok = true;
             for (auto neighbour : neighbours) {
                 auto move = test_move(matrix, vector<int>{row, col}, neighbour);
                 if (move.empty()) continue;
-                if (matrix[move[0]][move[1]] != 'O') {
-                    matrix[move[0]][move[1]] = 'Y';
+                if (matrix[move[0]][move[1]] == 'X') {
                     ok = false;
                     break;
                 }
