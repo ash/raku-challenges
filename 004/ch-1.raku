@@ -1,1 +1,1 @@
-say pi.Num ~ "\n"
+print(pi ~ "\n");
