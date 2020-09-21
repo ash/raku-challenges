@@ -21,7 +21,6 @@ my @scale = (1, 2 * * ...^ * > $n);
 
 my $total-bits = 0;
 for @scale -> $pwr {
-
     my $fill = ($n + 1) / (2 * $pwr);
     my $max = $pwr * 2;
     say "\n$pwr: fill=$fill, max=$max" if $verbose;
@@ -42,4 +41,5 @@ for @scale -> $pwr {
 
     $total-bits += $bits;
 }
+
 say $total-bits;
