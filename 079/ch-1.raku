@@ -21,8 +21,8 @@ my @scale = (1, 2 * * ...^ * > $n);
 
 my $total-bits = 0;
 for @scale -> $pwr {
-    my $fill = ($n + 1) / (2 * $pwr);
     my $max = $pwr * 2;
+    my $fill = ($n + 1) / $max;
     say "\n$pwr: fill=$fill, max=$max" if $verbose;
 
     my $fill-full = $fill.Int;
