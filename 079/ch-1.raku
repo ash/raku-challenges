@@ -5,6 +5,8 @@
 #
 # Comments: 
 #
+# This program implements a fast algorithm.
+#
 # Output:
 #
 # $ raku ch-1.raku 42

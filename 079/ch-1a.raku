@@ -5,6 +5,8 @@
 #
 # Comments: 
 #
+# This is atraightforwad but slow (for big input numbers) solution.
+#
 # Output:
 #
 # $ raku ch-1a.raku 42
