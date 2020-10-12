@@ -1,7 +1,7 @@
 #!/usr/bin/env raku
 #
 # Task 1 from
-# https://perlweeklychallenge.org/blog/perl-weekly-challenge-081/
+# https://perlweeklychallenge.org/blog/perl-weekly-challenge-082/
 
 # Test runs:
 # $ raku ch-1.raku 12 18
