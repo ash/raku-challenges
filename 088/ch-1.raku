@@ -5,11 +5,9 @@
 
 my @n = 5, 2, 1, 4, 3;
 
-my @r;
+# Output: 24, 60, 120, 30, 40
 
 my $prod = [*] @n;
-for @n -> $n {
-    @r.push: $prod / $n;
-}
+my @r = @n.map: $prod / *;
 
 put @r.join(', ');
