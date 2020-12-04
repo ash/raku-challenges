@@ -12,7 +12,7 @@ Implemenations of [Problem 1 of Week 89](https://perlweeklychallenge.org/blog/pe
 1. [Scala](ch-1.scala)
 1. [C#](ch-1.cs)
 1. [Dart](ch-1.dart)
-1. [Julia](ch-1.julia)
+1. [Julia](ch-1.jl)
 1. [D](ch1.d)
 1. [Lisp (SBCL)](ch-1.lisp)
 
