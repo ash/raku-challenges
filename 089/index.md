@@ -1,23 +1,23 @@
-Christmas time, and it’s time to talk to each and everyone! It’s a great idea to approaches people by speaking their languages. In today’s post, let me demonstrate the working solutions of [the first problem of Week 89](https://perlweeklychallenge.org/blog/perl-weekly-challenge-089/#TASK1) of The Weekly Challenge in 22 different programming languages. This is a kind of continuation of my last year’s series ‘[A Language a Day](https://andrewshitov.com/2019/11/25/a-language-a-day-advent-calendar-2019/)’.
+Christmas time, and it’s time to talk to each and every one! It’s a great idea to approaches people by speaking their languages. In today’s post, let me demonstrate the working solutions of [the first problem of Week 89](https://perlweeklychallenge.org/blog/perl-weekly-challenge-089/#TASK1) of The Weekly Challenge in 22 different programming languages. It is a kind of continuation of my last year’s series ‘[A Language a Day](https://andrewshitov.com/2019/11/25/a-language-a-day-advent-calendar-2019/)’.
 
 # Problem
 
 The problem is to add up all the [GCD](https://en.wikipedia.org/wiki/Greatest_common_divisor)s of the series of unique pairs of numbers between `1` and `$N` including `$N`.
 
-For example, for the input number `100` the summation chain should be 
+For example, for the input number `100`, the summation chain should be 
 
     GCD(1, 2) + GCD(1, 3) + GCD(1, 4) + ... + GCD(1, 99) + GCD(1, 100) +
     GCD(2, 3) + GCD(2, 4) + GCD(2, 5) + ... + GCD(2, 99) + GCD(2, 100) +
     ...
     ... + GCD(98, 100) + GCD(99, 100)
 
-The answer for this case is `13015`; it will be our password confirming that the person we speak to understood us clearly even in we spoke a foreign language.
+The answer in this case is `13015`; it will be our password confirming that the person we speak to understood us clearly even in we spoke a foreign language.
 
 # Solutions
 
-The solutions are gropped in two parts. In the first group, eitehr a built-in or a library function is used to compute the greatest common divisor. In the second group, the algorithm is implemented directly in the program. In each section, the solutions are listed in the order in which I solved them.
+The solutions are grouped into two parts. In the first group, either a built-in or a library function is used to compute the greatest common divisor. In the second group, the algorithm is implemented directly in the program. In each section, the solutions are listed in the order in which I solved them.
 
-All the programs can be run from command line and accept the value of `$N` as the first parameter. If the number is missing, the default value 3 is used. The result of the program is always a single number, which is the answer. You can see how to run the program exactly in the comment at the beginning of each program.
+All the programs can be run from the command line and accept the value of `$N` as the first parameter. If the number is missing, the default value `3` is used. The result of the program is always a single number, which is the answer. You can see how to run the program exactly in the comment at the beginning of each program.
 
 ## Using built-in or library functions for GCD
 
@@ -49,7 +49,7 @@ All the programs can be run from command line and accept the value of `$N` as th
 
 ### 1. Raku
 
-In Raku, we’ve got all the things required for a compact solution. Actually, the most compact among all the solutions below. So, we’ve got the `combinations` method to convert a range into unique pairs of numbers and the built-in `gcd` routine. We also have the pleasure to use reduction operators `[ ... ]` even if they can be easily replasaed. The first usage of it `[+]` can be replaced with the call of `sum`, and the second `[gcd] $_` with something like `$_[0] gcd $_[1]`. By the way, notice that in Raku, `gcd` is an infix operator, so you use it in the form of `$a gcd $b` and not as a function <s>`gcd($a, $b)`</s>.
+In Raku, we’ve got all the things required for a compact solution. Actually, the most compact among all the solutions below. So, we’ve got the `combinations` method to convert a range into unique pairs of numbers and the built-in `gcd` routine. We also have the pleasure to use reduction operators `[ ... ]` even if they can be easily replaced. The first usage of it `[+]` can be replaced with the call of `sum`, and the second `[gcd] $_` with something like `$_[0] gcd $_[1]`. By the way, notice that in Raku, `gcd` is an infix operator, so you use it in the form of `$a gcd $b` and not as a function <s>`gcd($a, $b)`</s>.
 
     # Test run:
     # $ raku ch-1.raku 100
@@ -81,7 +81,7 @@ In Python, there’s no built-in `gcd` or `combinations`, but both are available
 
 ### 3. C++
 
-Here is a solution in C++. As the author of the language say, ‘C++ feels like a new language’, and even in this simple task we can use the [library function `gcd`](https://en.cppreference.com/w/cpp/numeric/gcd) that is available since the standard C++17.
+Here is a solution in C++. As the author of the language say, ‘C++ feels like a new language’, and even in this simple task, we can use the [library function `gcd`](https://en.cppreference.com/w/cpp/numeric/gcd) that is available since the standard C++17.
 
 In the rest, the program also has two nested loops and accumulates the sum for each combination.
 
@@ -141,7 +141,7 @@ Good old modern and future Perl is here! As it is famous for CPAN, let us use a 
 
 ### 5. Ruby
 
-The program in Ruby is also quite compact, I would say. Notice how the `gcd` method is used here: `x.gcd(y)`. It is indeed _a method_ and it is called on one of the numbers. We’ll see more example of such approach.
+The program in Ruby is also quite compact, I would say. Notice how the `gcd` method is used here: `x.gcd(y)`. It is indeed _a method,_ and it is called on one of the numbers. We’ll see more example of such approach.
 
     # Usage:
     # $ ruby ch-1.rb 100
@@ -187,7 +187,7 @@ In Scala, we have to deal with Java’s legacy and create a class to start the d
 
 ### 7. C#
 
-Here is the solution in C#. Welcome to the world of .NET where everything is clearly spelled out: `BigInteger.GreatestCommonDivisor(x, y)`. In the rest, here we have the same two nested loops that build the pair of combinations.
+Here is the solution in C#. Welcome to the world of .NET, where many things are clearly spelt out: `BigInteger.GreatestCommonDivisor(x, y)`. In the rest, here we have the same two nested loops that build the pair of combinations.
 
     // Compile and run on a Mac:
     // $ csc -r:System.Numerics.dll ch-1.cs
@@ -218,7 +218,7 @@ Here is the solution in C#. Welcome to the world of .NET where everything is cle
 
 ### 8. Dart
 
-To me, languages built on C++ have their own specific charm. On one side, it is the same known language, but on the other, it injects may things that you were missing earlier (see, for example, how easy it is dealing with command-line argumnets). The `gcd` here is again a method called on a number: `x.gcd(y)`.
+To me, languages built on C++ have their specific charm. On one side, it is the same known language, but on the other, it injects may things that you were missing earlier (see, for example, how easy it is dealing with command-line arguments). The `gcd` here is again a method called on a number: `x.gcd(y)`.
 
     // To run:
     // $ dart ch-1.dart 100
@@ -241,7 +241,7 @@ To me, languages built on C++ have their own specific charm. On one side, it is 
 
 ### 9. Julia
 
-Julia is another interesting language that actually have many similarity with Raku. For our today’s need, there’s a built-in `gcd` function that I am happily using. The only unexpected obstacle is, maybe, the need to explicitly refer to the accumulator `s` as to a `global` variable.
+Julia is another interesting language that actually has many similarities with Raku. For our today’s need, there’s a built-in `gcd` function that I am happily using. The only unexpected obstacle is, maybe, the need to explicitly refer to the accumulator `s` as to a `global` variable.
 
     # To run:
     # $ julia ch-1.julia 100
@@ -262,7 +262,7 @@ Julia is another interesting language that actually have many similarity with Ra
 
 ### 10. D
 
-Acter C comes D. And here we are. In the program, you can see an extensive use of `auto` declarator. I believe, the situation here resembles how some elements of Raku appeared back in Perl, while Raku is was a continuation of Perl historically. Similarly, `auto` is now available in C++ too (while you need to practice to not to forget to use `auto` automatically).
+Acter C comes D. And here we are. In the program, you can see extensive use of `auto` declarator. I believe, the situation here resembles how some elements of Raku appeared back in Perl, while Raku is was a continuation of Perl historically. Similarly, `auto` is now available in C++ too (while you need to practice not to forget to use `auto` automatically).
 
     // How to run:
     // $ rdmd ch1.d 100
@@ -287,7 +287,7 @@ Acter C comes D. And here we are. In the program, you can see an extensive use o
 
 ### 11. Lisp
 
-Move on to a different world (for a bit). Here is the solution in a functional programming language. Well, actually, Common Lisp adds some syntax sugure to help building loops without manually manipulating loop counters and recursive calls. In any case, it also has the built-in `gcd` function, which, of course, you call as `(gcd x y)`. The below program works with the SBCL implemenation (mostly because of how it reads command line arguments).
+Move on to a different world (for a bit). Here is the solution in a functional programming language. Well, actually, Common Lisp adds some syntax sugar to help to build loops without manually manipulating loop counters and recursive calls. In any case, it also has the built-in `gcd` function, which, of course, you call as `(gcd x y)`. The below program works with the SBCL implementation (mostly because of how it reads command-line arguments).
 
     ;;; How to run:
     ;;; $ sbcl --script ch-1.lisp 100
@@ -395,7 +395,7 @@ A Node.js slash JavaScript program is here for your further entertainment. It re
 
 ### 14. Java
 
-Now look at the solution in Java. Yes, we have to use classes again, but in the rest, a nice and clean program that doesn’t require many more comments, I think.
+Now, look at the solution in Java. Yes, we have to use classes again, but in the rest, a nice and clean program that doesn’t require many more comments, I think.
 
     // To run:
     // $ java ch-1.java 100
@@ -428,7 +428,7 @@ Now look at the solution in Java. Yes, we have to use classes again, but in the 
 
 ### 15. Rust
 
-The program in Rust is an interesting combination of elements that we are familiar in both C, JavaScript, and even Perl and Raku (for example, ranges `..`). Also, a nice addition of built-in type system, and maybe an unusual concept of macros — those ‘functions’ with exclamation mark in their name such as `println!`.
+The program in Rust is an interesting combination of elements that we are familiar in both C, JavaScript, and even Perl and Raku (for example, ranges `..`). Also, a nice addition of built-in type system, and maybe an unusual concept of macros — those ‘functions’ with an exclamation mark in their name such as `println!`.
 
     // To compile and run:
     // $ rustc ch-1.rs
@@ -473,7 +473,7 @@ The program in Rust is an interesting combination of elements that we are famili
 
 ### 16. Pascal
 
-I have a question to you. When did you program in Pacal last time? My answer is ‘Something like 30 years ago’. But honestly, that nostalgic mood is a great thing for the evenings around Christmas time. And while there’s no `gcd` built in, you can implement it yourself if you remember to use `<>` instead of `!=` and a single `=` in comparisons: `if paramCount() = 0 then`. I also struggled a bit with semicolons, for example, no semicolon allowed before `else`.
+I have a question for you. When did you program in Pascal last time? My answer is ‘Something like 30 years ago’. But honestly, that nostalgic mood is a great thing for the evenings around Christmas time. And while there’s no `gcd` built in, you can implement it yourself if you remember to use `<>` instead of `!=` and a single `=` in comparisons: `if paramCount() = 0 then`. I also struggled a bit with semicolons, for example, no semicolon allowed before `else`.
 
     (*
         To compile and run:
@@ -518,7 +518,7 @@ I have a question to you. When did you program in Pacal last time? My answer is 
 
 ### 17. Go
 
-And now fast forward to the present days. Here is Go with its strict requirements to not leave garbage in the code and use all variables and imported modules. Notice that here, I used multiple assignments and avoided a temporary variable in the implementation of `gcd`: `b, a = a%b, b`. Heh, and the Go standard formatter removed my spaces around the `%` operator.
+And now fast forward to the present days. Here is Go with its strict requirements not to leave garbage in the code and use all variables and imported modules. Notice that here, I used multiple assignments and avoided a temporary variable in the implementation of `gcd`: `b, a = a%b, b`. Heh, and the Go standard formatter removed my spaces around the `%` operator.
 
     // To compile and run:
     // $ go run ch-1.go 100
@@ -558,7 +558,7 @@ And now fast forward to the present days. Here is Go with its strict requirement
 
 ### 18. Lua
 
-This is the language that is loved by many people, and I believe there are many cases when its design with tables can be benefitial. For our practice, I used standard approach: a few loops and it’s done. I would still point your attention to the following line: `n = arg[1] and arg[1] or 3`, which is actually a ternary operation to assign the default value if the argument is missing.
+Lua is the language that is loved by many people, and I believe there are many cases when its design with tables can be beneficial. For our practice, I used the standard approach: a few loops, and it’s done. I would still point your attention to the following line: `n = arg[1] and arg[1] or 3`, which is actually a ternary operation to assign the default value if the argument is missing.
 
     -- How to run:
     -- $ lua ch-1.lua 100
@@ -587,7 +587,7 @@ This is the language that is loved by many people, and I believe there are many 
 
 ### 19. Fortran
 
-Going further to some science-related language. Fortran is for the long time the language in which tons of computations are programmed for physics and mathematics. I believe, it would be very beneficial to use this as the language to teach students (OK, consider that a joke with some elements of truth) :-) What would be really interesting is to browse into some sophisticated algorithms written decades ago — many of them may be unexpectedly efficient.
+Going further to some science-related language. Fortran is for a long time the language in which tons of computations are programmed for physics and mathematics. I believe it would be very beneficial to use this as the language to teach students (OK, consider that a joke with some elements of truth) :-) What would be really interesting is to browse into some sophisticated algorithms written decades ago — many of them may be unexpectedly efficient.
 
     ! To compile and run:
     !
