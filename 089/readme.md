@@ -9,7 +9,6 @@ Implemenations of [Problem 1 of Week 89](https://perlweeklychallenge.org/blog/pe
 1. [C++ (C++17)](ch-1.cpp)
 1. [Perl](ch-1.pl)
 1. [Ruby](ch-1.rb)
-1. [Lua](ch-1.lua)
 1. [Scala](ch-1.scala)
 1. [C#](ch-1.cs)
 1. [Dart](ch-1.dart)
@@ -25,7 +24,10 @@ Implemenations of [Problem 1 of Week 89](https://perlweeklychallenge.org/blog/pe
 1. [Rust](ch-1.rs)
 1. [Pascal (FreePascal)](ch-1.pas)
 1. [Go](ch-1.go)
+1. [Lua](ch-1.lua)
 1. [Fortran (Fortran 95)](ch-1.f95)
 1. [PHP](ch-1.php)
 1. [Kotlin](ch-1.kt)
 1. [Bash](ch-1.bash)
+
+Also read a [big article](index.md) about all the solutions and the task.
