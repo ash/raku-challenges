@@ -5,7 +5,7 @@
     13015
 *)
 
-program Hello(input, output);
+program Challenge89Part1(input, output);
 
 uses sysutils;
 
