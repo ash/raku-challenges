@@ -3,6 +3,8 @@
 # Task 2 from
 # https://perlweeklychallenge.org/blog/perl-weekly-challenge-091/
 
+# Comments: https://andrewshitov.com/2020/12/14/raku-challenge-week-91/
+
 # $ raku ch-2.raku 1 2 1 2
 # 1
 

@@ -3,6 +3,8 @@
 # Task 1 from
 # https://perlweeklychallenge.org/blog/perl-weekly-challenge-091/
 
+# Comments: https://andrewshitov.com/2020/12/14/raku-challenge-week-91/
+
 unit sub MAIN(Int $n = 1122234);
 
 # Cannot process more than 10 repeating digits.
